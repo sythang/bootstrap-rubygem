@@ -17,7 +17,7 @@ Please see the appropriate guide for your environment of choice:
 Add `bootstrap4` to your Gemfile:
 
 ```ruby
-gem 'bootstrap4', git: 'git://github.com/tanoku/redcarpet.git'
+gem 'bootstrap4', git: 'git@github.com:sythang/bootstrap-rubygem.git'
 ```
 
 Ensure that `sprockets-rails` is at least v2.3.2.
