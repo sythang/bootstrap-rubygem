@@ -1,6 +1,6 @@
 require 'autoprefixer-rails'
 
-module Bootstrap
+module Bootstrap4
   module Rails
     class Engine < ::Rails::Engine
       initializer 'bootstrap.assets' do |app|

@@ -14,13 +14,13 @@ class Updater
       manifest = ''
       bootstrap_js_files.each do |name|
         name = name.gsub(/\.js$/, '')
-        manifest << "//= require ./bootstrap/#{name}\n"
+        manifest << "//= require ./bootstrap4/#{name}\n"
       end
       dist_js = read_files('dist/js', %w(bootstrap.js bootstrap.min.js))
       {
-          'assets/javascripts/bootstrap-sprockets.js' => manifest,
-          'assets/javascripts/bootstrap.js'           => dist_js['bootstrap.js'],
-          'assets/javascripts/bootstrap.min.js'       => dist_js['bootstrap.min.js'],
+          'assets/javascripts/bootstrap4-sprockets.js' => manifest,
+          'assets/javascripts/bootstrap4.js'           => dist_js['bootstrap.js'],
+          'assets/javascripts/bootstrap4.min.js'       => dist_js['bootstrap.min.js'],
       }.each do |path, content|
         save_file path, remove_source_mapping_url(content)
         log_processed path

@@ -14,10 +14,10 @@ Please see the appropriate guide for your environment of choice:
 
 ### a. Ruby on Rails
 
-Add `bootstrap` to your Gemfile:
+Add `bootstrap4` to your Gemfile:
 
 ```ruby
-gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'bootstrap4', git: 'git://github.com/tanoku/redcarpet.git'
 ```
 
 Ensure that `sprockets-rails` is at least v2.3.2.
@@ -28,7 +28,7 @@ Import Bootstrap styles in `app/assets/stylesheets/application.scss`:
 
 ```scss
 // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
+@import "bootstrap4";
 ```
 
 The available variables can be found [here](assets/stylesheets/bootstrap/_variables.scss).
@@ -60,17 +60,17 @@ Add Bootstrap dependencies and Bootstrap to your `application.js`:
 ```js
 //= require jquery3
 //= require popper
-//= require bootstrap-sprockets
+//= require bootstrap4-sprockets
 ```
 
-While `bootstrap-sprockets` provides individual Bootstrap components
+While `bootstrap4-sprockets` provides individual Bootstrap4 components
 for ease of debugging, you may alternatively require
-the concatenated `bootstrap` for faster compilation:
+the concatenated `bootstrap4` for faster compilation:
 
 ```js
 //= require jquery3
 //= require popper
-//= require bootstrap
+//= require bootstrap4
 ```
 
 ### b. Other Ruby frameworks
